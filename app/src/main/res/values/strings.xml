@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DemoProject</string>
+    <string name="button1">BUTTON 1</string>
+    <string name="button2">BUTTON 2</string>
+    <string name="TextInput">Input number of elements</string>
+    <string name="TextHead">Timetable for HSE FE</string>
+</resources>
