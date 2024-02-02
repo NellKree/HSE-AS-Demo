@@ -4,4 +4,5 @@
     <string name="button2">BUTTON 2</string>
     <string name="TextInput">Input number of elements</string>
     <string name="TextHead">Timetable for HSE FE</string>
+    <string name="range_error">Введите число в диапазоне от 1 до 50</string>
 </resources>
