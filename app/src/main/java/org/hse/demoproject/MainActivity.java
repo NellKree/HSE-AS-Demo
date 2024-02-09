@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
+            if (count == 1 && buttonNumber == 2){
+                result.setText(String.format(Locale.US, "Result: %d", 1));
+                return;
+            }
+
             numberList = new ArrayList<>();
             for (int i = 0; i < count; i++) {
                 numberList.add(i + 1);
@@ -57,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 result.setText(String.format(Locale.US, "Result: %d", sum));
             } else if (buttonNumber == 2) {
+
                 long product = 1;
                 for (int num : numberList) {
                     if (num % 2 == 0) {
