@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView result;
     private EditText number;
-    private List<Integer> numberList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_demo);
+        setContentView(R.layout.activity_main);
 
         number = findViewById(R.id.number);
         Button button1 = findViewById(R.id.button1);
@@ -40,12 +40,16 @@ public class MainActivity extends AppCompatActivity {
         try {
             long count = Long.parseLong(numberVal);
 
-            if (count < 1 || count > 50) {
+            if (count < 1 || count > 40) {
                 Toast.makeText(this, getString(R.string.range_error), Toast.LENGTH_SHORT).show();
                 return;
             }
+            if (count == 1 && buttonNumber == 2)  {
+                result.setText(String.format(Locale.US, "Result: %d", 0));
+                return;
+            }
 
-            numberList = new ArrayList<>();
+            List<Integer> numberList = new ArrayList<>();
             for (int i = 0; i < count; i++) {
                 numberList.add(i + 1);
             }
